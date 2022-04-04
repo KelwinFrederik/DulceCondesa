@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Send+Flowers&display=swap');
+:root{
+    --marromEscuro:#361610; 
+    --marromEscuroTransparente:#361610d0; 
+    --marromClaro:#7B523E;
+    --amarelo:#F4C379;
+    --amareloClaro:#f3ce96;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Lobster','Send Flowers','Indie Flower', cursive;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--amarelo);
+    min-width: 345px;
+    max-width: 500px;
+    margin: auto;
+    text-shadow: 1px 1px var(--marromClaro);
+}
+
+body, a{
+    color: var(--amareloClaro);
+}
+
+header section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 2% 3%;
+    padding-top: 4%;
+    background-color: var(--marromEscuro);
+    
+    transition: all 1s ease;
+    box-shadow: 1px 1px 4px 1px var(--marromClaro);
+}
+
+main{
+    padding: 2%;
+    padding-bottom: 75px; /* GOOGLE ADSENSE*/
+    min-height: 100vh;
+    border-top: 1px solid var(--marromClaro);
+    transition: all 1s ease;
+}
+
+#MainPhoto{
+    width: 35%;
+    padding-right: 4%;
+    border-right: 1px solid var(--amarelo);
+}
+
+#MainPhoto img{
+    border-radius: 50%;
+    border: 1px solid var(--amareloClaro);
+    width: 100%;
+    box-shadow: 1px 1px 4px 1px var(--marromClaro);
+}
+
+#MainInformation{
+    margin: 1%;
+    width: 100%;
+    text-align: center;
+}
+
+#MainInformation > h1{
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Send Flowers', cursive;
+    text-shadow: 3px 2px var(--marromClaro);
+}
+
+#MainInformation > p{
+    padding: 2%;
+    font-size: smaller;
+}
+
+#MainInformation a, #linksLinhaDoces > a{
+    text-decoration: none;
+}
+
+#linksLinhaDoces{
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 3px 0 var(--marromClaro);
+}
+
+#linksLinhaDoces > a{
+    background-color: var(--marromEscuro);
+    cursor: pointer;
+    margin: 4%;
+    padding: 2% 4%;
+    border-radius: 45%;
+    box-shadow: 2px 3px 4px 2px var(--marromEscuroTransparente);
+}
+
+fieldset{
+    border-color: var(--marromEscuro);
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+
+fieldset > legend{
+    text-align: center;
+    color: var(--marromEscuro);
+    padding: 0 5%;
+}
+.catalogItem{
+    background-color: var(--marromEscuro);
+    border: 1px var(--marromClaro) dashed;
+    border-radius: 10px;
+    margin: 4% 3%;
+    text-align: right;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2% 2%;
+    height: 90px;
+    box-shadow: 2px 3px 4px 1px var(--marromEscuroTransparente);
+}
+
+.catalogItem > .catalogItemImg{
+    width: 30%;
+    height: 100%;
+}
+
+.catalogItemImg > img{
+    border:1px solid var(--amareloClaro);
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 1px 1px 3px 0 var(--marromClaro);
+}
+
+.catalogItemText{
+    width: 70%;
+    height: 100%;
+    text-align: center;
+}
+
+.catalogItem h3{
+    font-family: 'Send Flowers', cursive;
+    border-bottom: 1px solid var(--marromClaro);
+}
+
+.catalogItemText p{
+    font-size: small;
+}
+
+#Sabores{
+    
+}
+/* 
+    TODO FAZER HEADER SITICK 
+    PARA SE MANTER NA TELA QUANDO ROLAR A TELA PARA BAIXO. 
+*/
