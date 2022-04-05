@@ -19,9 +19,9 @@
 body{
     background-color: var(--amarelo);
     min-width: 345px;
-    max-width: 500px;
     margin: auto;
     text-shadow: 1px 1px var(--marromClaro);
+    transition: all 2s ease;
 }
 
 body, a{
@@ -55,6 +55,7 @@ main{
     width: 35%;
     padding-right: 4%;
     border-right: 1px solid var(--amarelo);
+    transition: all 2s ease;
 }
 
 #MainPhoto img{
@@ -71,16 +72,18 @@ main{
 }
 
 #MainInformation > h1{
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     text-align: center;
-    font-size: x-large;
+    font-size: 8vw;
     font-family: 'Send Flowers', cursive;
     text-shadow: 3px 2px var(--marromClaro);
+    transition: all 1s ease;
 }
 
 #MainInformation > p{
-    padding: 2%;
-    font-size: smaller;
+    padding: 1%;
+    font-size: 3.5vw;
+    transition: all 1s ease;
 }
 
 #MainInformation a, #linksLinhaDoces > a{
@@ -96,10 +99,20 @@ main{
 #linksLinhaDoces > a{
     background-color: var(--marromEscuro);
     cursor: pointer;
-    margin: 4%;
+    margin: 2%;
+    font-size: 2vw;
     padding: 2% 4%;
     border-radius: 45%;
     box-shadow: 2px 3px 4px 2px var(--marromEscuroTransparente);
+}
+
+#MainInformation a:hover{
+    color: var(--amarelo);
+}
+
+#linksLinhaDoces > a:hover{
+    color: var(--amarelo);
+    background-color: var(--marromClaro);
 }
 
 fieldset{
@@ -153,13 +166,82 @@ fieldset > legend{
 }
 
 .catalogItemText p{
-    font-size: small;
+    font-size:medium;
 }
 
 #Sabores{
     
 }
+
 /* 
     TODO FAZER HEADER SITICK 
     PARA SE MANTER NA TELA QUANDO ROLAR A TELA PARA BAIXO. 
 */
+@media screen and (min-width:800px) and (max-width:1024px) {
+    header section{
+        justify-content: space-between;
+        padding: 0 3%;
+    }
+
+    #MainPhoto{
+        width: 25%;
+        padding-right: 3%;
+    }
+    
+    #MainInformation > h1{
+        font-size: 8vw;
+    }
+    
+    #MainInformation > p{
+        padding: 0 2%;
+    }
+    
+    #linksLinhaDoces{
+        max-width: 800px;
+        margin: auto;
+    }
+
+    #catalogoProdutos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+
+        margin-top: 20px ;
+    }
+
+    #catalogoProdutos > legend{
+        font-size: 3vw;
+    }
+    
+    .catalogItem{
+        width: 45%;
+        margin: 1% 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1% 1%;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    main{
+        max-width: 1024px;
+        margin:auto;
+    }
+    
+    #MainInformation > h1{
+        font-size: 6vw;
+        padding: 0;
+    }
+    
+    #MainInformation > p{
+        font-size: 2vw;
+        padding: 0;
+    }
+
+    #MainPhoto{
+        width: 20%;
+        padding-right: 3%;
+    }
+}
