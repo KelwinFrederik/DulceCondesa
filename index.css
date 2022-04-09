@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Send+Flowers&display=swap');
+
 :root{
     --marromEscuro:#361610; 
     --marromEscuroTransparente:#361610d0; 
@@ -18,7 +19,7 @@
 
 body{
     background-color: var(--amarelo);
-    min-width: 345px;
+    min-width: 375px;
     margin: auto;
     text-shadow: 1px 1px var(--marromClaro);
     transition: all 2s ease;
@@ -34,55 +35,57 @@ header section{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    
-    padding: 2% 3%;
-    padding-top: 4%;
+    padding: 8px 0;
+
+    border-bottom-left-radius: 15% ;
+    border-bottom-right-radius: 15% ;
     background-color: var(--marromEscuro);
-    
+    border-bottom: 1px solid var(--marromClaro);
+
     transition: all 1s ease;
-    box-shadow: 1px 1px 4px 1px var(--marromClaro);
+    box-shadow: 1px 2px 4px 1px var(--marromClaro);
 }
 
 main{
-    padding: 2%;
+    max-width: 500px;
+    margin: auto;
+
+    padding: 15px;
     padding-bottom: 75px; /* GOOGLE ADSENSE*/
     min-height: 100vh;
-    border-top: 1px solid var(--marromClaro);
     transition: all 1s ease;
 }
 
 #MainPhoto{
-    width: 35%;
-    padding-right: 4%;
+    width: 120px;
+    padding: 0 15px;
     border-right: 1px solid var(--amarelo);
     transition: all 2s ease;
 }
 
 #MainPhoto img{
-    border-radius: 50%;
-    border: 1px solid var(--amareloClaro);
     width: 100%;
+    border: 1px solid var(--amareloClaro);
+    border-radius: 50%;
     box-shadow: 1px 1px 4px 1px var(--marromClaro);
 }
 
 #MainInformation{
-    margin: 1%;
     width: 100%;
     text-align: center;
 }
 
 #MainInformation > h1{
-    margin-bottom: 1%;
     text-align: center;
-    font-size: 8vw;
+    font-size: xx-large;
     font-family: 'Send Flowers', cursive;
     text-shadow: 3px 2px var(--marromClaro);
     transition: all 1s ease;
 }
 
 #MainInformation > p{
-    padding: 1%;
-    font-size: 3.5vw;
+    padding: 3px 0;
+    font-size: medium;
     transition: all 1s ease;
 }
 
@@ -90,24 +93,25 @@ main{
     text-decoration: none;
 }
 
+#MainInformation a:hover{
+    color: var(--amarelo);
+}
+
 #linksLinhaDoces{
     display: flex;
-    justify-content: space-evenly;
+    padding: 3%;
+    margin: auto;
+    justify-content: space-around;
     box-shadow: 1px 1px 3px 0 var(--marromClaro);
 }
 
 #linksLinhaDoces > a{
     background-color: var(--marromEscuro);
     cursor: pointer;
-    margin: 2%;
-    font-size: 2vw;
+    font-size: medium;
     padding: 2% 4%;
-    border-radius: 45%;
+    border-radius: 48%;
     box-shadow: 2px 3px 4px 2px var(--marromEscuroTransparente);
-}
-
-#MainInformation a:hover{
-    color: var(--amarelo);
 }
 
 #linksLinhaDoces > a:hover{
@@ -116,56 +120,56 @@ main{
 }
 
 fieldset{
+    text-align: center;
     border-color: var(--marromEscuro);
     border-radius: 10px;
     margin-bottom: 3%;
 }
 
 fieldset > legend{
-    text-align: center;
     color: var(--marromEscuro);
     padding: 0 5%;
 }
+
 .catalogItem{
     background-color: var(--marromEscuro);
     border: 1px var(--marromClaro) dashed;
     border-radius: 10px;
     margin: 4% 3%;
-    text-align: right;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
-    padding: 2% 2%;
-    height: 90px;
+    padding: 2% 10px;
+    min-height: 100px;
     box-shadow: 2px 3px 4px 1px var(--marromEscuroTransparente);
-}
-
-.catalogItem > .catalogItemImg{
-    width: 30%;
-    height: 100%;
-}
-
-.catalogItemImg > img{
-    border:1px solid var(--amareloClaro);
-    border-radius: 10px;
-    height: 100%;
-    box-shadow: 1px 1px 3px 0 var(--marromClaro);
 }
 
 .catalogItemText{
     width: 70%;
     height: 100%;
-    text-align: center;
+}
+
+.catalogItemImg {
+    align-self: center;
+}
+
+.catalogItemImg > img{
+    margin-left: 5px;
+    width: 90px;
+    border:1px solid var(--amareloClaro);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 0 var(--marromClaro);
 }
 
 .catalogItem h3{
+    text-align: center;
     font-family: 'Send Flowers', cursive;
     border-bottom: 1px solid var(--marromClaro);
 }
 
 .catalogItemText p{
+    text-align: justify;
     font-size:medium;
 }
 
@@ -177,28 +181,42 @@ fieldset > legend{
     TODO FAZER HEADER SITICK 
     PARA SE MANTER NA TELA QUANDO ROLAR A TELA PARA BAIXO. 
 */
-@media screen and (min-width:800px) and (max-width:1024px) {
-    header section{
-        justify-content: space-between;
-        padding: 0 3%;
+@media screen and (min-width:450px){
+    #Contatos{
+        display: flex;
+        justify-content: space-evenly;
     }
 
     #MainPhoto{
-        width: 25%;
-        padding-right: 3%;
+        margin: 7px 0;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    header section{
+        padding: 0 3%;
+    }
+
+    main{
+        max-width: 760px;
+    }
+
+    #MainPhoto{
+        width: 160px;
+        padding-right: 30px;
     }
     
     #MainInformation > h1{
-        font-size: 8vw;
+        font-size: 55px;
     }
     
-    #MainInformation > p{
+    #MainInformation p{
         padding: 0 2%;
     }
     
     #linksLinhaDoces{
-        max-width: 800px;
-        margin: auto;
+        max-width: 500px;
+        padding: 1% 0;
     }
 
     #catalogoProdutos{
@@ -207,11 +225,12 @@ fieldset > legend{
         flex-wrap: wrap;
         align-content: stretch;
 
-        margin-top: 20px ;
+        margin-top: 20px;
+        padding-top: 15px;
     }
 
     #catalogoProdutos > legend{
-        font-size: 3vw;
+        font-size: 25px;
     }
     
     .catalogItem{
@@ -222,26 +241,66 @@ fieldset > legend{
         padding: 1% 1%;
     }
 
+    .catalogItemText > h3{
+        font-size: 18px;      
+    }
+    
+    .catalogItemText > p{
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width:1024px) {
-    main{
-        max-width: 1024px;
-        margin:auto;
-    }
-    
-    #MainInformation > h1{
-        font-size: 6vw;
-        padding: 0;
-    }
-    
-    #MainInformation > p{
-        font-size: 2vw;
-        padding: 0;
+    header section{
+        padding: 0 3%;
     }
 
+    main{
+        max-width: 1024px;
+        font-size: 25px;
+    }
+    
     #MainPhoto{
-        width: 20%;
-        padding-right: 3%;
+        width: 230px;
+        padding-right: 40px;
+    }
+
+    #MainInformation > h1{
+        font-size: 86px;
+    }
+    
+    #MainInformation  p{
+        font-size: 25px;
+        padding: 0 2%;
+    }
+
+    #linksLinhaDoces{
+        max-width: 800px;
+        padding: 2% 0;
+    }
+
+    #linksLinhaDoces > a{
+        font-size: 25px;
+    }
+
+    #catalogoProdutos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    
+    .catalogItem{
+        width: 45%;
+        margin: 1% 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1% 1%;
+    }
+
+    .catalogItemText > p{
+        font-size: 20px;
     }
 }

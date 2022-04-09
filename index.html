@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+    <a id="target"></a>
     <header>
         <section>
             <div id="MainPhoto">
@@ -16,23 +17,25 @@
             </div>
             <div id="MainInformation">
                 <h1> Dulce Condesa</h1>
-                <p>
-                    <a href="https://wa.me/5531972361900?text=Olá,%20eu%20gostaria%20de%20fazer%20uma%20encomenda." target="_blank"><i class="fa-brands fa-whatsapp"></i>
-                        (31) 97236-1900
-                    </a>
-                </p>
-                <p>
-                    <a href="mailto:condesa.ladulce@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i>
-                        condesa.ladulce@gmail.com
-                    </a>
-                </p>
+                <div id="Contatos">
+                    <p>
+                        <a href="https://wa.me/5531972361900?text=Olá,%20eu%20gostaria%20de%20fazer%20uma%20encomenda." target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                            (31) 97236-1900
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:condesa.ladulce@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i>
+                            condesa.ladulce@gmail.com
+                        </a>
+                    </p>
+                </div>
             </div>
         </section>
     </header>
     <main>
         <fieldset id="linksLinhaDoces">
-            <a> Sabores Tradicionais </a>
-            <a> Sabores Finos </a>
+            <a href="javascript:openPopUp('Standard')"> Sabores Standards </a>
+            <a href="javascript:openPopUp('Premium')"> Sabores Premiums </a>
         </fieldset>
 
         <fieldset id="catalogoProdutos">
@@ -40,7 +43,7 @@
             <div class="catalogItem">
                 <div class="catalogItemText">
                     <h3>Caixa da Felicidade</h3>
-                    <p> Caixa personalizada com quatro doces. com uma descrição bem grande. mais algumas palavras de teste. </p>
+                    <p> Caixa personalizada com quatro doces. com uma descrição bem grande. mais algumas palavras de teste.</p>
                 </div>
                 <div class="catalogItemImg">
                     <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
@@ -48,44 +51,8 @@
             </div>
             <div class="catalogItem">
                 <div class="catalogItemText">
-                    <h3>Prestígio</h3>
-                    <p> Descrição </p>
-                </div>
-                <div class="catalogItemImg">
-                    <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
-                </div>
-            </div>
-            <div class="catalogItem">
-                <div class="catalogItemText">
-                    <h3>Prestígio</h3>
-                    <p> Descrição </p>
-                </div>
-                <div class="catalogItemImg">
-                    <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
-                </div>
-            </div>
-            <div class="catalogItem">
-                <div class="catalogItemText">
-                    <h3>Prestígio</h3>
-                    <p> Descrição </p>
-                </div>
-                <div class="catalogItemImg">
-                    <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
-                </div>
-            </div>
-            <div class="catalogItem">
-                <div class="catalogItemText">
-                    <h3>Prestígio</h3>
-                    <p> Descrição </p>
-                </div>
-                <div class="catalogItemImg">
-                    <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
-                </div>
-            </div>
-            <div class="catalogItem">
-                <div class="catalogItemText">
-                    <h3>Prestígio</h3>
-                    <p> Descrição </p>
+                    <h3>Prestígio - chocolate com côco tenta</h3>
+                    <p> Caixa personalizada com quatro doces. com uma descrição bem grande. mais algumas palavras de teste. qqqqqqqqqqqqq qqqqqq qqqqqqqqqqqq qqqqqqqq qqqqqq qqqqqqqqqqq qqqqqqqq qqqqqqqq qqqqqqqq</p>
                 </div>
                 <div class="catalogItemImg">
                     <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
@@ -120,14 +87,6 @@
             </div>
         </fieldset>
     </main>
-
-    <section id="Sabores">
-        <fieldset>
-            <legend><i class="fa-solid fa-spoon"></i> Sabores Tradicionais/Finos </legend>
-            &nbsp;
-        </fieldset>
-    </section>
-
     <script src="https://kit.fontawesome.com/e717b920da.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
