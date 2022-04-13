@@ -34,10 +34,9 @@
     </header>
     <main>
         <fieldset id="linksLinhaDoces">
-            <a href="javascript:openPopUp('Standard')"> Sabores Standards </a>
-            <a href="javascript:openPopUp('Premium')"> Sabores Premiums </a>
+            <a data-button-Sabores="#Sabores" id="Standards"> Sabores Standards </a>
+            <a data-button-Sabores="#Sabores" id="Premiums"> Sabores Premiums </a>
         </fieldset>
-
         <fieldset id="catalogoProdutos">
             <legend> <i class="fa-solid fa-book-open"></i> Catálogo de produtos</legend>
             <div class="catalogItem">
@@ -87,6 +86,50 @@
             </div>
         </fieldset>
     </main>
+    <section id="Sabores">
+        <button data-button-Close="#Sabores" class="close-button">&times;</button>
+        <fieldset>
+            <legend id="SaboresTitulo"></legend>
+            <div class="catalogItem">
+                <div class="catalogItemText">
+                    <h3>Prestígio</h3>
+                    <p> Descrição </p>
+                </div>
+                <div class="catalogItemImg">
+                    <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
+                </div>
+            </div>
+            <div class="catalogItem">
+                <div class="catalogItemText">
+                    <h3>Prestígio</h3>
+                    <p> Descrição </p>
+                </div>
+                <div class="catalogItemImg">
+                    <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
+                </div>
+            </div>
+            <div class="catalogItem">
+                <div class="catalogItemText">
+                    <h3>Prestígio</h3>
+                    <p> Descrição </p>
+                </div>
+                <div class="catalogItemImg">
+                    <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
+                </div>
+            </div>
+            <div class="catalogItem">
+                <div class="catalogItemText">
+                    <h3>Prestígio</h3>
+                    <p> Descrição </p>
+                </div>
+                <div class="catalogItemImg">
+                    <img src="assets/Cx_Doces.jpeg" alt="Item 1"/>
+                </div>
+            </div>
+        </fieldset>
+    </section>
+    <div id="overlay">&nbsp;</div>
+    
     <script src="https://kit.fontawesome.com/e717b920da.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
