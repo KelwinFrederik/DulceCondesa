@@ -18,7 +18,7 @@
 }
 
 body{
-    background-color: var(--amarelo);
+    background-color: var(--amareloClaro);
     min-width: 375px;
     margin: auto;
     text-shadow: 1px 1px var(--marromClaro);
@@ -101,6 +101,7 @@ main{
     display: flex;
     padding: 3%;
     margin: auto;
+    margin-bottom: 10px;
     justify-content: space-around;
     box-shadow: 1px 1px 3px 0 var(--marromClaro);
 }
@@ -179,11 +180,12 @@ fieldset > legend{
     transform: translate(-50%,-50%) scale(0);
     top: 50%;
     left: 50%;
-    transition: 1s ease all;
+    transition: .2s ease all;
     
-    padding: 25px;
+    padding: 10px;
+    padding-top: 30px;
     width: 75%;
-    max-width: 80%;
+    max-width: 450px;
 
     border-radius: 10px;
     background-color: var(--marromEscuro);
@@ -191,7 +193,13 @@ fieldset > legend{
 }
 
 #Sabores fieldset{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
     border-color: var(--marromClaro);
+    margin-bottom: 10px;
 }
 
 #Sabores legend{
@@ -223,6 +231,43 @@ fieldset > legend{
 #Sabores.active{
     transform: translate(-50%,-50%) scale(1);
 }
+
+.saboresItem{
+    background-color: var(--marromClaro);
+    border: 1px var(--amarelo) dashed;
+    border-radius: 10px;
+    margin: 1%;
+    margin-top: 2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 30%;
+    min-height: 125px;
+}
+
+.saboresItem h3{
+    padding: 5px;
+    font-family: 'Send Flowers', cursive;
+    
+    min-height: 55px;
+    border-bottom: 1px solid var(--amareloClaro);
+}
+
+.saboresItemImg {
+    align-self: center;
+}
+
+.saboresItemImg > img{
+    width: 95%;
+    margin: auto;
+    margin-top: 5px;
+    
+    border:1px solid var(--amareloClaro);
+    border-radius: 10px;
+}
+
 
 .close-button{
     border: 1px var(--marromClaro) solid;
@@ -322,6 +367,10 @@ fieldset > legend{
     .catalogItemText > p{
         font-size: 14px;
     }
+
+    .saboresItem h3{
+        min-height: none;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -376,5 +425,9 @@ fieldset > legend{
 
     .catalogItemText > p{
         font-size: 20px;
+    }
+
+    .saboresItem h3{
+        min-height: none;
     }
 }
