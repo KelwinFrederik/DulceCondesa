@@ -1,5 +1,4 @@
 //TODO: alterar titulo, mainPhoto e MainInformation dinamicamente
-//TODO: carregar catálogo dinamicamente
 //Classes
 var itensCatalogo;
 var itensSabores;
