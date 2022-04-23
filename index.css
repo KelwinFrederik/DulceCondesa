@@ -21,7 +21,7 @@ body{
     background-color: var(--amareloClaro);
     min-width: 375px;
     margin: auto;
-    text-shadow: 1px 1px var(--marromClaro);
+    text-shadow: .5px .5px var(--marromClaro);
     transition: all 2s ease;
 }
 
@@ -29,9 +29,16 @@ body, a{
     color: var(--amareloClaro);
 }
 
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--amarelo);
+}
+
 header section{
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
@@ -89,14 +96,6 @@ main{
     transition: all 1s ease;
 }
 
-#MainInformation a, #linksLinhaDoces > a{
-    text-decoration: none;
-}
-
-#MainInformation a:hover{
-    color: var(--amarelo);
-}
-
 #linksLinhaDoces{
     display: flex;
     padding: 3%;
@@ -116,8 +115,7 @@ main{
 }
 
 #linksLinhaDoces > a:hover{
-    color: var(--amarelo);
-    background-color: var(--marromClaro);
+    background-color: var(--marromEscuroTransparente);
 }
 
 fieldset{
@@ -202,7 +200,7 @@ fieldset > legend{
     margin-bottom: 10px;
 }
 
-#Sabores legend{
+#Sabores legend, .close-button{
     color: var(--amarelo);
 }
 
@@ -224,8 +222,7 @@ fieldset > legend{
 }   
 
 #Sabores .catalogItem h3{
-    border-bottom: 1px solid var(--marromEscuro);
-    
+    border-bottom: 1px solid var(--marromEscuro);   
 }
 
 #Sabores.active{
@@ -268,13 +265,11 @@ fieldset > legend{
     border-radius: 10px;
 }
 
-
 .close-button{
     border: 1px var(--marromClaro) solid;
     border-radius: 45%;
     padding: 0 6px;
 
-    color: var( --amarelo);
     background-color: var(--marromClaro);
 }
 
@@ -288,7 +283,7 @@ fieldset > legend{
     right: 0;
     background-color: rgba(0,0,0,.5);
     pointer-events: none;
-    transition: 0.5s ease all;
+    transition: .5s ease all;
 }
 
 #overlay.active{
@@ -296,10 +291,6 @@ fieldset > legend{
     pointer-events: all;
 }
 
-/* 
-    TODO FAZER HEADER SITICK 
-    PARA SE MANTER NA TELA QUANDO ROLAR A TELA PARA BAIXO. 
-*/
 @media screen and (min-width:450px){
     #Contatos{
         display: flex;
@@ -311,11 +302,41 @@ fieldset > legend{
     }
 }
 
-@media screen and (min-width:768px) and (max-width:1023px) {
+@media screen and (min-width:768px){
     header section{
         padding: 0 3%;
     }
 
+    #MainInformation p{
+        padding: 0 2%;
+    }
+
+    #catalogoProdutos{
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+
+    #catalogoProdutos > legend{
+        font-size: 25px;
+    }
+
+    .catalogItem{
+        width: 45%;
+        margin: 1% 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1% 1%;
+    }
+
+    .saboresItem h3{
+        min-height: none;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
     main{
         max-width: 760px;
     }
@@ -329,35 +350,9 @@ fieldset > legend{
         font-size: 55px;
     }
     
-    #MainInformation p{
-        padding: 0 2%;
-    }
-    
     #linksLinhaDoces{
         max-width: 500px;
         padding: 1% 0;
-    }
-
-    #catalogoProdutos{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: stretch;
-
-        margin-top: 20px;
-        padding-top: 15px;
-    }
-
-    #catalogoProdutos > legend{
-        font-size: 25px;
-    }
-    
-    .catalogItem{
-        width: 45%;
-        margin: 1% 0;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1% 1%;
     }
 
     .catalogItemText > h3{
@@ -367,17 +362,9 @@ fieldset > legend{
     .catalogItemText > p{
         font-size: 14px;
     }
-
-    .saboresItem h3{
-        min-height: none;
-    }
 }
 
 @media screen and (min-width:1024px) {
-    header section{
-        padding: 0 3%;
-    }
-
     main{
         max-width: 1024px;
         font-size: 25px;
@@ -394,7 +381,6 @@ fieldset > legend{
     
     #MainInformation  p{
         font-size: 25px;
-        padding: 0 2%;
     }
 
     #linksLinhaDoces{
@@ -406,28 +392,7 @@ fieldset > legend{
         font-size: 25px;
     }
 
-    #catalogoProdutos{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        margin-top: 20px;
-        padding-top: 10px;
-    }
-    
-    .catalogItem{
-        width: 45%;
-        margin: 1% 0;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1% 1%;
-    }
-
     .catalogItemText > p{
         font-size: 20px;
-    }
-
-    .saboresItem h3{
-        min-height: none;
     }
 }
