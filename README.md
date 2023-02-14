@@ -40,7 +40,7 @@
  <p>
 	MIT License
 	 
-	Copyright (c) 2021 Kelwin F Alves
+	Copyright (c) 2021 Kelwin Alves
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
